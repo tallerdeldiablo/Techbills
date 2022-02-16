@@ -2,10 +2,10 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <h1 className="m-0">Tech Expenses</h1>
-        <p className="m-0">Get into the mind of a programmer.</p>
+    <header className="">
+      <div className="">
+        <h1 className="m-0">Header</h1>
+        <p className=""></p>
       </div>
     </header>
   );

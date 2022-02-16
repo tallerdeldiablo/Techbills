@@ -57,41 +57,43 @@ const ExpenseForm = () => {
 
   return (
     <div>
-      <h3>What's on your techy mind?</h3>
+      <h3>ADD your expenses</h3>
 
       <p
         className={`m-0 ${
           characterCount === 280 || error ? 'text-danger' : ''
         }`}
       >
-        Character Count: {characterCount}/280
+        Total Expenses $ {characterCount}
+        
         {error && <span className="ml-2">Something went wrong...</span>}
       </p>
       <form
         className="flex-row justify-center justify-space-between-md align-center"
         onSubmit={handleFormSubmit}
       >
-        <div className="col-12">
+        <div className="col-6">
           <textarea
             name="expenseValue"
-            placeholder="Here's a new expense..."
+            placeholder="Add Name of the expense."
             value={formState.expenseValue}
             className="form-input w-100"
             style={{ lineHeight: '1.5' }}
             onChange={handleChange}
           ></textarea>
         </div>
-        <div className="col-12 col-lg-9">
+        <div className="col-12 col-lg-6">
           <input
+            type="number"
             name="expenseAuthor"
-            placeholder="Add your name to get credit for the expense..."
+            placeholder="Add amount for the expense"
             value={formState.expenseAuthor}
             className="form-input w-100"
             onChange={handleChange}
           />
         </div>
 
-        <div className="col-12 col-lg-3">
+        <div className="col-12 col-lg-4">
           <button className="btn btn-primary btn-block py-3" type="submit">
             Add Expense
           </button>

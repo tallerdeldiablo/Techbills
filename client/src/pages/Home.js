@@ -22,11 +22,13 @@ const Home = () => {
         <div className="col-12 col-md-8 mb-3">
           {loading ? (
             <div>Loading...</div>
-          ) : (
+          ) : (<>
             <ExpenseList
               expenses={expenses}
               title="Some Feed for Expense(s)..."
             />
+            {console.log(expenses)}
+            </>
           )}
         </div>
       </div>
